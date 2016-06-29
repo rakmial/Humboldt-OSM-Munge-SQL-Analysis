@@ -1,0 +1,3 @@
+Direct Link: https://s3.amazonaws.com/metro-extracts.mapzen.com/humboldt_california.osm.bz2
+
+The MapZen OSM file contains information for Humboldt County as well as bordering areas of nearby counties. I grew up and have spent most of my life in Humboldt County.

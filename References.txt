@@ -1,0 +1,47 @@
+Documentation References:
+
+https://docs.python.org/2/library/xml.etree.elementtree.html
+http://www.tutorialspoint.com/python/
+https://docs.python.org/2/library/
+https://docs.python.org/2/library/re.html
+http://docs.python-cerberus.org/en/stable/
+https://www.sqlite.org/docs.html
+
+Stack Overflow References:
+http://stackoverflow.com/questions/1471250/counting-distinct-over-multiple-columns
+http://stackoverflow.com/questions/354070/sql-join-where-clause-vs-on-clause
+http://stackoverflow.com/questions/5522607/how-can-i-do-a-count-distinct-in-sqlite
+http://stackoverflow.com/questions/22493724/python-lxml-using-iterparse-to-edit-and-output-xml
+http://stackoverflow.com/questions/15399904/using-python-elementtrees-itertree-function-and-writing-modified-tree-to-output
+http://stackoverflow.com/questions/18102976/how-to-create-a-db-file-in-sqlite3-using-a-schema-file
+http://stackoverflow.com/questions/14947916/import-csv-to-sqlite
+http://stackoverflow.com/questions/31421942/sqlite3-cant-import-csv-file
+http://stackoverflow.com/questions/10115396/how-to-test-if-an-attribute-exists-in-some-xml
+http://stackoverflow.com/questions/5844672/delete-an-element-from-a-dictionary
+http://stackoverflow.com/questions/11277432/how-to-remove-a-key-from-a-dictionary/11277439#11277439
+http://stackoverflow.com/questions/1602934/check-if-a-given-key-already-exists-in-a-dictionary
+http://stackoverflow.com/questions/11520492/difference-between-del-remove-and-pop-on-lists
+http://stackoverflow.com/questions/5447494/best-way-to-remove-an-item-from-a-python-dictionary
+http://stackoverflow.com/questions/14947916/import-csv-to-sqlite/24582022#24582022
+http://stackoverflow.com/questions/5942402/python-csv-to-sqlite
+http://stackoverflow.com/questions/14947916/import-csv-to-sqlite
+http://stackoverflow.com/questions/4562100/why-truncate-when-we-open-a-file-in-w-mode-in-python
+http://stackoverflow.com/questions/23001757/python-elementtree-no-element-found-exception
+http://stackoverflow.com/questions/1720421/how-to-append-list-to-second-list-concatenate-lists
+http://stackoverflow.com/questions/1602934/check-if-a-given-key-already-exists-in-a-dictionary
+http://stackoverflow.com/questions/18707338/print-raw-string-from-variable-not-getting-the-answers
+http://stackoverflow.com/questions/3095434/inserting-newlines-in-xml-file-generated-via-xml-etree-elementtree-in-python
+http://stackoverflow.com/questions/5466618/too-many-values-to-unpack-iterating-over-a-dict-key-string-value-list
+http://stackoverflow.com/questions/3294889/iterating-over-dictionaries-using-for-loops-in-python
+http://stackoverflow.com/questions/3496518/python-using-a-dictionary-to-count-the-items-in-a-list
+http://stackoverflow.com/questions/3900054/python-strip-multiple-characters
+http://stackoverflow.com/questions/3880037/how-to-create-a-list-or-tuple-of-empty-lists-in-python
+http://stackoverflow.com/questions/209840/map-two-lists-into-a-dictionary-in-python
+http://stackoverflow.com/questions/3428532/how-to-import-a-csv-file-using-python-with-headers-intact-where-first-column-is
+
+
+Other References:
+
+I fielded many questions over the course of this project in the Udacity forums and was generally guided by Myles. If you happen to see him, give him a high five for me.
+
+Some guidance was taken from the sample SQL project available at: https://gist.github.com/carlward/54ec1c91b62a5f911c42#file-sample_project-md
