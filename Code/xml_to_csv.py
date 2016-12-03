@@ -7,11 +7,11 @@ import cerberus
 import schema
 
 ''' variables used in process_map and subfunctions shape_element and validate_element'''
-NODES_PATH = r"C:\Users\Bash\Desktop\Udacity\2_Data Analysis\P3\Project\CSVs\nodes.csv"
-NODE_TAGS_PATH = r"C:\Users\Bash\Desktop\Udacity\2_Data Analysis\P3\Project\CSVs\nodes_tags.csv"
-WAYS_PATH = r"C:\Users\Bash\Desktop\Udacity\2_Data Analysis\P3\Project\CSVs\ways.csv"
-WAY_NODES_PATH = r"C:\Users\Bash\Desktop\Udacity\2_Data Analysis\P3\Project\CSVs\ways_nodes.csv"
-WAY_TAGS_PATH = r"C:\Users\Bash\Desktop\Udacity\2_Data Analysis\P3\Project\CSVs\ways_tags.csv"
+NODES_PATH = r"/run/media/jtl/OtherMind/Udacity/2_Data_Analysis/P3/Project/CSVs/nodes.csv"
+NODE_TAGS_PATH = r"/run/media/jtl/OtherMind/Udacity/2_Data_Analysis/P3/Project/CSVs/nodes_tags.csv"
+WAYS_PATH = r"/run/media/jtl/OtherMind/Udacity/2_Data_Analysis/P3/Project/CSVs/ways.csv"
+WAY_NODES_PATH = r"/run/media/jtl/OtherMind/Udacity/2_Data_Analysis/P3/Project/CSVs/ways_nodes.csv"
+WAY_TAGS_PATH = r"/run/media/jtl/OtherMind/Udacity/2_Data_Analysis/P3/Project/CSVs/ways_tags.csv"
 
 NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version', 'changeset', 'timestamp']
 NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
@@ -23,6 +23,30 @@ WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 LOWER_COLON = re.compile(r'^([a-z]|_)+:([a-z]|_)+')
 PROBLEMCHARS = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 SCHEMA = schema.schema
+
+mapping = { "St": "Street",
+            "St.": "Street",
+            "street": "Street",
+            "Dr": "Drive",
+            "Ave": "Avenue",
+            "Rd.": "Road",
+            "Rd": "Road",
+            "Int": "Intersection",
+            "Blvd": "Boulevard",
+            "Ln": "Lane",
+            "Rnch": "Ranch",
+            "Ctr": "Center"
+            }
+
+def update_name(name, mapping):     # used in process_map()
+    newname = None
+    namesplit = name.split()
+    for key, value in mapping.iteritems():
+        if namesplit[-1] == key:
+                newname = name.replace(key,value)
+    if newname == None:
+        return name
+    return newname
 
 '''used in process_map()'''
 def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIELDS,
@@ -69,7 +93,7 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
             tags.append({
                 'id': element.attrib['id'],
                 'key': kval,
-                'value': child.attrib['v'],
+                'value': update_name(child.attrib['v'],mapping),
                 'type': tagtype
             })
         if child.tag == 'nd':
@@ -159,4 +183,4 @@ def process_map(file_in, validate=True):
                     way_nodes_writer.writerows(el['way_nodes'])
                     way_tags_writer.writerows(el['way_tags'])
 
-process_map(r'C:\Users\Bash\Desktop\Udacity\2_Data Analysis\P3\Project\humboldt_california.osm\humboldt_california.osm')
+process_map(r'/run/media/jtl/OtherMind/Udacity/2_Data_Analysis/P3/Project/ProjectRepo/sample.osm')
